@@ -16,20 +16,10 @@ const change2 = (e) =>{
   const Create = () =>{
     props.onSaveInnerData(Item)
   }
- const ItemList = (props)=>{
-  return(
-    <div>
-      {props.items.length ===0 && <p> NIE MA </p>}
-      {props.items.length >0 &&
-      props.items.map((item, index)=> (
-        <Item 
-        key={index}
-        title={item.tittle}
-        amount={item.amount}></Item>
-      ))}
-    </div>
-  )
- }
+  const Delete = () => {
+    
+  }
+
 
 return(
   <div>
@@ -38,8 +28,9 @@ return(
       amount:
       <input required onChange={change2}></input>
     < button onClick={Create}>Dodaj</button>
+    <button onClick={Delete}>Usun</button>
   </div>
-)
+);
 }
 
 
